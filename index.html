@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="tkmcApp">
     <head>
         <title>Templar Knights MC Canada</title>
         <meta name="keywords" content="" />
@@ -25,6 +25,16 @@
           <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
         <script src="libs/angular.min.js"></script>
+        <script src="libs/angular-route.min.js"></script>
+        <script>
+            var app = angular.module("tkmcApp", ["ngRoute"]);
+            app.config(function($routeProvider) {
+                $routeProvider
+                .when("/toys-for-kids-2016", {
+                    templateUrl : "club-rides/toy-ride-2016.html"
+                });
+            });
+        </script>
     </head>
     
     <body>
@@ -136,6 +146,8 @@
                 The Knights Templar was a fraternal order that was founded in the 11th century and were renowned for their fierceness and courage in battle.Today, the Templar Knights Motorcycle Club displays courage and goodwill in other ways. We organize fund-raising activities, honor the Countries in which we live, honor all branches of Military Service and proudly support all local government agencies and public safety.
             </p>
         </div>
+        
+        <ng-view></ng-view>
     <!-- 
         Begin Club Members
         -->
@@ -149,7 +161,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="clearfix"> </div>
+                <div class="clearfix"> </div> 
                     <ul class="row row_team">
                         <li class="col-lg-3 col-md-3 col-sm-6 ">
                             <div class="text-center">
@@ -707,20 +719,20 @@
                         <ul class="list-inline">
                             <li class="col-md-4">
                                 <a href="#">
-                                    <img class="img-responsive" src="images/blog-image-1.jpg" alt="gallery 1" />
+                                    <img class="img-responsive" src="images/toys_for_kids_2016.jpeg" alt="gallery 1" />
                                 </a>
                             </li>
                             <li  class="col-md-8">
                                 <div class="pull-left">
-                                    <span class="blog_header">GRAPHIC DESIGN</span><br/>
-                                    <span>Posted by : <a class="link_orange" href="#"><span class="txt_orange">Tracy</span></a></span>
+                                    <span class="blog_header">Toys For Kids 2016</span><br/>
+                                    <span>Hosted by : <a class="link_orange" href="#"><span class="txt_orange">TKMC Canada</span></a></span>
                                 </div>
                                 <div class="pull-right">
-                                    <a class="btn btn-orange" href="#" role="button">21 February 2084</a>
+                                    <a class="btn btn-orange" ng-href="#toys-for-kids-2016" role="button">11 September 2016</a>
                                 </div>
                                 <div class="clearfix"> </div>
                                 <p class="blog_text">
-                                    Aliquam quis rutrum risus, ut condimentum ipsum. Nullam aliquet libero augue, eget auctor felis vulputate id. Proin a enim eu libero ornare malesuada. Sed iaculis fringilla lacinia. Sed laoreet lectus vitae [...]
+                                    Another successful ride in support of families in the area.  A truck load of toys were donated which will go to families trying to make Christmas brighter for their kids. 
                                 </p>
                             </li>
                         </ul>
@@ -729,19 +741,20 @@
                     <div class="col-sm-5 col-md-6 blog_post">
                         <ul class="list-inline">
                             <li class="col-md-4"><a href="#">
-                                <img class="img-responsive" src="images/blog-image-2.jpg" alt="gallery 2" /></a>
+                                <img class="img-responsive" src="images/bruce_poppa.jpeg" alt="gallery 2" /></a>
                             </li>
                             <li class="col-md-8">
                                 <div class="pull-left">
-                                    <span class="blog_header">WEBSITE TEMPLATE</span><br/>
-                                    <span>Posted by : <a class="link_orange" href="#"><span class="txt_orange">Mary</span></a></span>
+                                    <span class="blog_header">Bruce "Poppa" Bigras Ride</span><br/>
+                                    <span>Hosted by : <a class="link_orange" href="#"><span class="txt_orange">TKMC Canada</span></a></span>
                                 </div>
                                 <div class="pull-right">
                                     <a class="btn btn-orange" href="#" role="button">18 February 2084</a>
                                 </div>
                                 <div class="clearfix"> </div>
                                 <p class="blog_text">
-                                        Morbi imperdiet ipsum sit amet dui pharetra, vulputate porta neque tristique. Quisque id turpis tristique, venenatis erat sit amet, venenatis turpis. Ut tellus ipsum, posuere bibendum [...]
+                                        Bruce "Poppa" Bigras was one of the "Original 9" for the 1st Templar Knights MC expansion lodge in Canada. His dedication and commitment to our club helped it reach official status. Bruce had a passion for life and family. 
+                                        Our Grand Lodge in Utah elevated him to "Honorary Knight" although he passed away before the full knighting ceremony. We continue to honor our brother with the " Bruce Poppa Bigras Memorial Ride" every spring with the money raised going to those locally in need such as the local food bank. His memory lives on through the family he loved and those he called - "Brothers". 
                                 </p>
                             </li>
                         </ul>	
