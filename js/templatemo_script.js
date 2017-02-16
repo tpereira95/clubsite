@@ -71,10 +71,10 @@ jQuery(function($) {
             }
         });
 		
-		var dt = window.atob('IHwgRGVzaWduOiA8YSByZWw9Im5vZm9sbG93IiBocmVmPSJodHRwOi8vd3d3LnRlbXBsYXRlbW8uY29tL3RtLTM5NS11cmJhbmljIiB0YXJnZXQ9Il9wYXJlbnQiPlVyYmFuaWM8L2E+'); // decode the string
+		/*var dt = window.atob('IHwgRGVzaWduOiA8YSByZWw9Im5vZm9sbG93IiBocmVmPSJodHRwOi8vd3d3LnRlbXBsYXRlbW8uY29tL3RtLTM5NS11cmJhbmljIiB0YXJnZXQ9Il9wYXJlbnQiPlVyYmFuaWM8L2E+'); // decode the string
 		var div = document.getElementById('footer-line');
 
-		div.innerHTML = div.innerHTML + dt;
+		div.innerHTML = div.innerHTML + dt;*/
 
         // to stick navbar on top
         $('.templatemo-top-menu ').stickUp();
