@@ -27,6 +27,7 @@
         <script src="../libs/angular.min.js"></script>
         <script src="../libs/angular-route.min.js"></script>
         <script src="../module/app.module.js"></script>
+        <script src="../directives/app.directives.js"></script>
     </head>
     
     <body>
@@ -133,9 +134,45 @@
                 </div>	
             </div>
         </div>
-        <div ng-controller="RideController">
-            {{myVar}}
-        </div>
+        
+         <div id="templatemo-portfolio" >
+            <div class="container">
+                <div class="row">
+                    <div class="templatemo-line-header" >
+                        <div class="text-center">
+                            <hr class="team_hr team_hr_left hr_gray"/><span class="txt_darkgrey">TOYS FOR KIDS 2016</span>
+                            <hr class="team_hr team_hr_right hr_gray" />
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="templatemo-gallery-category" style="font-size:16px; margin-top:80px;">
+                        <div class="text-center">
+                            <a class="active" href=".gallery">All</a> 
+                        </div>
+                    </div>
+                </div> <!-- /.row -->
+                
+                <div class="clearfix"></div>
+                <div class="text-center">
+                    <ul class="templatemo-project-gallery" >
+                        <li class="col-lg-2 col-md-2 col-sm-2  gallery" >
+                            <a class="colorbox" href="../images/tkmcsantaparade.jpeg" data-group="gallery-parade">
+                                <div class="templatemo-project-box">
+
+                                    <img src="../images/tkmcsantaparade.jpeg" class="img-responsive" alt="gallery" />
+
+                                    <div class="project-overlay">
+                                        <h5>SANTA CLAUS PARADE</h5>
+                                        <hr />
+                                        <h4>FLOAT</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+             </div><!--portfolio-->
+                
         <div id="templatemo-contact">
             <div class="container">
                 <div class="row">

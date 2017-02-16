@@ -8,7 +8,7 @@ angular.module('tkmcApp')
                 templateUrl:'/templates/footer.html',
                  link: function () {
                 /*your code */
-                     console.log('directive fired');
+                     
                 }
             };
         }]);
