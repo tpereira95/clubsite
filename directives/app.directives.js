@@ -5,7 +5,7 @@ angular.module('tkmcApp')
             'use strict';
             return{
                 restrict: 'E',
-                templateUrl:'/templates/footer.html',
+                templateUrl:'templates/footer.html',
                  link: function () {
                 /*your code */
                      
@@ -19,7 +19,7 @@ angular.module('tkmcApp')
             'use strict';
             return{
                 restrict: 'E',
-                templateUrl:'/templates/carousel.html',
+                templateUrl:'templates/carousel.html',
                  link: function () {
                 /*your code */
                      
@@ -33,7 +33,7 @@ angular.module('tkmcApp')
             'use strict';
             return{
                 restrict: 'E',
-                templateUrl:'/templates/contact.html',
+                templateUrl:'templates/contact.html',
                  link: function () {
                 /*your code */
                      

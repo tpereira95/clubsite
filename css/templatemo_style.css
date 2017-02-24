@@ -370,6 +370,10 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
     margin:15px;
 }
 
+.templatemo-project-gallery-custom{
+    margin: auto;
+}
+
 .txt_darkgrey {
     color: #333333;
 }
