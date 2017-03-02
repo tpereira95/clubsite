@@ -12,11 +12,11 @@ var app = angular.module('tkmcApp', ['ui.bootstrap', 'ngAnimate']);
         
         $scope.formsubmit = function(isValid){
             
-            if($scope.contactName === '' || $scope.contactEmail === '' || $scope.contactMessage === ''){
+            if($scope.contactName === '' || $scope.contactName === undefined || $scope.contactEmail === '' || $scope.contactEmail       ===undefined || $scope.contactMessage === undefined || $scope.contactMessage === ''){
                 $scope.invalid = true;
                 $scope.showErrorAlert = true;
                 $scope.errorMessage = 'Your name, email and message are required. Please enter something before submitting.  Thank you.'
-                return;
+                return null;
             }
             if (isValid){
                 
@@ -42,5 +42,10 @@ var app = angular.module('tkmcApp', ['ui.bootstrap', 'ngAnimate']);
                 $scope.contactEmail = '';
                 $scope.contactMessage = '';
             }  
+        }
+        
+        $scope.closeMessage = function(index){
+            $scope.showSuccessAlert = false;
+            $scope.showErrorAlert = false;
         }
 }]);
