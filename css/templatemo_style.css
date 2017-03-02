@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 /* ------ Carousel ----- */
 
 #templatemo-carousel {
-    background: url('../images/carousel_bg3.jpg') no-repeat center center fixed; 
+    background: url('../images/carousel-group.gif') no-repeat; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -100,13 +100,13 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 
 @media (max-width: 768px) {
     #templatemo-carousel .carousel-caption {
-        padding-bottom: 120px;
+        padding-bottom: 20px;
     }
 }
 
 @media (max-width: 1024px) {
     #templatemo-carousel {
-        background: url('../images/carousel_bg3.jpg') no-repeat center center; 
+        background: url('../images/carousel-group.gif') no-repeat center center; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -605,6 +605,22 @@ ul.templatemo-project-gallery  li  a img:hover {
 .blog_box {
 	margin-left: -12px;
 }
+
+.repeat-item.ng-enter,
+    .repeat-item.ng-leave {
+      -webkit-transition: 0.5s linear all;
+      transition: 0.5s linear all;
+    }
+    
+    .repeat-item.ng-enter,
+    .repeat-item.ng-leave.ng-leave-active {
+      opacity: 0;
+    }
+    
+    .repeat-item.ng-leave,
+    .repeat-item.ng-enter.ng-enter-active {
+      opacity: 1;
+    }
 
 @media (min-width:991px) and (max-width:1200px) {
     .templatemo-project-box, .project-overlay {
