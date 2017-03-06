@@ -1,5 +1,4 @@
-angular.module('tkmcApp', [])
+angular.module('tkmcApp', ['ui.bootstrap', 'ngAnimate', 'cgBusy'])
     .controller('RideController', function($scope){
-        console.log('controller fired');
-        $scope.myVar = 'Trevor was here';
+        
 })

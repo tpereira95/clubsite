@@ -5,14 +5,14 @@
 //        $scope.map = {center: {latitude: 45.474920, longitude: 76.687719}, zoom: 14 };
 //        $scope.options = {scrollwheel: false};
 //    });
-var app = angular.module('tkmcApp', ['ui.bootstrap', 'ngAnimate']);
+var app = angular.module('tkmcApp');
 
     app.controller('TKMCFormController', ['$scope', '$http', function($scope, $http) {
         $scope.url = 'submit.php';
-        
+       
         $scope.formsubmit = function(isValid){
             
-            if($scope.contactName === '' || $scope.contactName === undefined || $scope.contactEmail === '' || $scope.contactEmail       ===undefined || $scope.contactMessage === undefined || $scope.contactMessage === ''){
+            if($scope.contactName === '' || $scope.contactName === undefined || $scope.contactEmail === '' || $scope.contactEmail === undefined || $scope.contactMessage === undefined || $scope.contactMessage === ''){
                 $scope.invalid = true;
                 $scope.showErrorAlert = true;
                 $scope.errorMessage = 'Your name, email and message are required. Please enter something before submitting.  Thank you.'
@@ -20,7 +20,7 @@ var app = angular.module('tkmcApp', ['ui.bootstrap', 'ngAnimate']);
             }
             if (isValid){
                 
-                $http.post($scope.url, {"name": $scope.contactName, "email": $scope.contactEmail, "message": $scope.contactMessage}).
+               $scope.req = $http.post($scope.url, {"name": $scope.contactName, "email": $scope.contactEmail, "message": $scope.contactMessage}).
                     success(function(data, status){
                            //console.log(data);
                             $scope.status = status;

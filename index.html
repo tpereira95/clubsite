@@ -19,6 +19,7 @@
         <!-- Custom styles for this template -->
         <link href="js/colorbox/colorbox.css"  rel='stylesheet' type='text/css'>
         <link href="css/templatemo_style.css"  rel='stylesheet' type='text/css'>
+        <link href="css/angular-busy.css"  rel='stylesheet' type='text/css'>
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -32,6 +33,7 @@
         <script src="js/angular-touch.min.js"></script>
         <script src="js/angular-sanitize.js"></script>
         <script src="js/ui-bootstrap-tpls-2.5.0.min.js"></script>
+        <script src="js/angular-busy.min.js"></script>
         <script src="module/app.module.js"></script>
         <script src="controllers/app.controllers.js"></script>
         <script src="directives/app.directives.js"></script>
@@ -876,12 +878,13 @@
                         <div class="clearfix"></div>
                         <i>You can find, <span class="txt_orange">TKMC Canada</span> in Renfrew Ontario.</i>
                     </div>
-                    <div class="col-md-4 contact_right">
+                    <div class="col-md-4 contact_right" ng-controller="TKMCFormController as formCtrl" cg-busy="req">
                         <p>TKMC Canada Renfrew Lodge - Commander's Address</p>
                         <p><img src="images/location.png" alt="icon 1" /> 8th Street, Renfrew</p>
                         <p><img src="images/phone1.png"  alt="icon 2" /> 416-525-3972</p>
                         <p><img src="images/globe.png" alt="icon 3" /><a class="link_orange" href="#"><span class="txt_orange">www.tkmc-canada.com</span></a></p>
-                        <form name="tkmcContactForm" class="form-horizontal" ng-controller="TKMCFormController as formCtrl" >
+<!--                         <div class="spinner" ng-show="loading"></div>-->
+                        <form name="tkmcContactForm" class="form-horizontal">
                             <script type="text/ng-template" id="alert.html">
                                 <div ng-transclude></div>
                             </script>
@@ -894,7 +897,8 @@
                             </div>
                             
                              <div class="clearfix"></div>
-                            
+                            <!-- Show spinner while contact details are saved   -->
+                           
                             <div class="form-group">
                                 <input type="text" class="form-control" ng-model="contactName" placeholder="Your Name..." maxlength="40" />
                             </div>
