@@ -74,7 +74,7 @@ $mail->SMTPAuth = true;
 $mail->Username = "tkmccanada@gmail.com";
 
 //Password to use for SMTP authentication
-$mail->Password = "";
+$mail->Password = "!HardDrive";
 
 //Set who the message is to be sent from
 $mail->setFrom($data->email, $data->name);

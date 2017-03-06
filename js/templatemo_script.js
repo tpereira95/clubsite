@@ -104,12 +104,15 @@ jQuery(function($) {
 });
 
 function initialize() {
+    
+    if(document.getElementById('map-canvas') != null){
     var mapOptions = {
       zoom: 12,
       center: new google.maps.LatLng(45.474920, -76.687719)
     };
 
     var map = new google.maps.Map(document.getElementById('map-canvas'),  mapOptions);
+    }
 }
 
 // scroll animation 
