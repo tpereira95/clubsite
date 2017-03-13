@@ -49,39 +49,45 @@ $mail->isSMTP();
 // 0 = off (for production use)
 // 1 = client messages
 // 2 = client and server messages
-$mail->SMTPDebug = 2;
+$mail->SMTPDebug = 3;
 
 //Ask for HTML-friendly debug output
 $mail->Debugoutput = 'html';
-
+echo (extension_loaded('openssl')?'SSL loaded':'SSL not loaded')."\n";
 //Set the hostname of the mail server
 //$mail->Host = 'smtp.gmail.com';
 //$mail->Host = 'a2plcpnl0866.prod.iad2.secureserver.net';
 // use
-$mail->Host = gethostbyname('smtp.gmail.com');
+//$mail->Host = 'a2plcpnl0866.prod.iad2.secureserver.net';
+$mail->Host = 'smtp.gmail.com';
 // if your network does not support SMTP over IPv6
 
 //Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
-$mail->Port = 587;
+$mail->Port = 25;
+
+
+//$mail->ssl = false;
+
+//$mail->authentication = false;
 
 //Set the encryption system to use - ssl (deprecated) or tls
-$mail->SMTPSecure = 'tls';
+//$mail->SMTPSecure = 'tls';
 
 //Whether to use SMTP authentication
 $mail->SMTPAuth = true;
-
+//$mail->SMTPSecure = false;
 //Username to use for SMTP authentication - use full email address for gmail
 $mail->Username = "tkmccanada@gmail.com";
 
 //Password to use for SMTP authentication
 $mail->Password = "!HardDrive";
 
-//Set who the message is to be sent from
-$mail->setFrom($data->email, $data->name);
-
+//Set who the message is to be sent from 
+//$mail->setFrom("tkmccanada@gmail.com", "TKMC Canada");
+$mail->setFrom('tkmccanada@gmail.com', 'TKMC Canada');
 
 //Set who the message is to be sent to
-$mail->addAddress('tp_ca@yahoo.com ', 'Trevor Pereira');
+$mail->addAddress('tp_ca@yahoo.com', 'Trevor Pereira');
 
 
 $mail->isHTML(true);
