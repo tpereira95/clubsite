@@ -58,8 +58,8 @@ echo (extension_loaded('openssl')?'SSL loaded':'SSL not loaded')."\n";
 //$mail->Host = 'smtp.gmail.com';
 //$mail->Host = 'a2plcpnl0866.prod.iad2.secureserver.net';
 // use
-//$mail->Host = 'a2plcpnl0866.prod.iad2.secureserver.net';
-$mail->Host = 'smtp.gmail.com';
+$mail->Host = 'mail.temp.tkmcrenfrew.org';
+//$mail->Host = 'smtp.gmail.com';
 // if your network does not support SMTP over IPv6
 
 //Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
@@ -77,7 +77,7 @@ $mail->Port = 25;
 $mail->SMTPAuth = true;
 //$mail->SMTPSecure = false;
 //Username to use for SMTP authentication - use full email address for gmail
-$mail->Username = "tkmccanada@gmail.com";
+$mail->Username = "	tkmccontactsubmission@temp.tkmcrenfrew.org";
 
 //Password to use for SMTP authentication
 $mail->Password = "!HardDrive";
