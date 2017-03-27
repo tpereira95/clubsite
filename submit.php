@@ -22,18 +22,20 @@ $sql = "INSERT INTO Contact(email, message, name) VALUES ('$data->email', '$data
 
 
     
-if ($conn->query($sql) === TRUE) {
+/*if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
-}
+}*/
 
 $conn->close();
     
 //now i am just printing the values
+/*
 echo "Name : ".$data->name."\n";
 echo "Email : ".$data->email."\n";
 echo "Message : ".$data->message."\n";
+*/
 
 //send an email to let us know a new contact request has been added
 
@@ -49,7 +51,7 @@ $mail->isSMTP();
 // 0 = off (for production use)
 // 1 = client messages
 // 2 = client and server messages
-$mail->SMTPDebug = 3;
+$mail->SMTPDebug = false;
 
 //Ask for HTML-friendly debug output
 $mail->Debugoutput = 'html';
@@ -88,6 +90,8 @@ $mail->setFrom('tkmccanada@gmail.com', 'TKMC Canada');
 
 //Set who the message is to be sent to
 $mail->addAddress('tp_ca@yahoo.com', 'Trevor Pereira');
+$mail->addAddress('tkmc_renfrew@hotmail.com', 'Clint McWhirter');
+
 
 
 $mail->isHTML(true);

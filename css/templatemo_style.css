@@ -618,6 +618,11 @@ ul.templatemo-project-gallery  li  a img:hover {
     align-items: center;
 }
 
+.margin-about{
+    margin-right: 60px;
+    margin-left: 60px;
+}
+
 .repeat-item.ng-enter,
     .repeat-item.ng-leave {
       -webkit-transition: 0.5s linear all;
